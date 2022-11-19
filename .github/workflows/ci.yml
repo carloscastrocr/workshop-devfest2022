@@ -4,18 +4,18 @@ on:
     branches: [ '*' ]
 jobs:
   linter:
-  name: Linter
-  runs-on: ubuntu-latest
-  steps:
-    - name: Checking Angular Styles
-      uses: actions/checkout@v3
-    - name: Setup NodeJs
-      uses: actions/setup-node@v3
-      with:
-        node-version: 18.x
-    - name: Install
-      run: npm ci
-    - name: Run Linter
+   name: Linter
+   runs-on: ubuntu-latest
+   steps:
+     - name: Checking Angular Styles
+       uses: actions/checkout@v3
+     - name: Setup NodeJs
+       uses: actions/setup-node@v3
+       with:
+         node-version: 18.x
+     - name: Install
+       run: npm ci
+     - name: Run Linter
       run: npm run lint
 
 
